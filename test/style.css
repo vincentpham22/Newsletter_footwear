@@ -9,19 +9,6 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.part1 {
-  background: url("./img/people.jpg");
-  object-fit: contain;
-  background-position: center;
-  background-size: 100%;
-  background-repeat: no-repeat;
-  padding: 30px;
-  min-height: 30em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /* Styles pour l'en-tête */
 header {
   background-color: white;
@@ -39,67 +26,29 @@ nav {
   padding: 30px 0 20px 0;
   font-weight: bold;
   min-height: 100px;
+  text-transform: uppercase;
 }
 
-nav ul {
+ul {
   list-style-type: none;
 }
-
-nav ul li {
-  display: inline;
+nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-left: 35px;
 }
-
+nav ul li {
+  margin-right: 18px;
+}
 nav ul li a {
   color: #fff;
-  padding: 25px;
+  /* padding: 25px; */
   text-decoration: none;
   font-size: large;
 }
-
-/* Styles pour le formulaire */
-form {
-  text-align: center;
-}
-
-form h2 {
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: white;
-  font-weight: bold;
-}
-
-input[type="email"],
-input[type="text"] {
-  margin: 10px;
-  padding: 10px;
-  width: 300px;
-  font-weight: bold;
-}
-
-input[type="submit"] {
-  background-color: #000;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  padding: 10px 20px;
-  font-size: 16px;
-  margin-top: 20px;
-  border-radius: 5px 5px 5px 5px;
-}
-
-input[type="submit"]:hover {
-  background: #2b5ea2;
-  transition-delay: 0.5;
-  transition-duration: 0.3s;
-  transition-property: background;
-  transition-timing-function: ease;
-  border: solid black 1px;
-  color: black;
-  transform: scale(1.25);
-  &:hover,
-  &:focus {
-    background: white;
-  }
+nav ul li a:hover {
+  color: cyan;
 }
 
 /* Styles pour le pied de page */
@@ -107,16 +56,18 @@ footer {
   background-color: black;
   color: #fff;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
   min-height: 200px;
+  margin-top: 50px;
 }
 
 .ff {
   display: flex;
   align-items: center;
   text-align: center;
-  gap: 30px;
+  gap: 50px;
 }
 
 .fff {
@@ -125,29 +76,43 @@ footer {
   align-items: center;
 }
 
-footer ul {
-  list-style-type: none;
+.ff1 {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+footer li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+footer li a:hover, .rs i:hover {
+  color: cyan;
 }
 
 footer .rs ul {
   display: flex;
 }
 
-footer .rs img {
-  height: 35px;
+.rs ul li {
+  margin-right: 10px;
 }
 
-footer .rs li {
-  padding: 0 3px 0 3px;
+.rs i {
+  color: white;
+  font-size: 30px;
 }
 
 header img {
   height: 75px;
 }
 
-.champ {
-  display: flex;
-  align-items: center;
-  color: white;
-  font-weight: bold;
+@media screen and (max-width: 727px) {
+  .ff ul  {
+    margin-right: 10px;
+  }
+  footer {
+    padding-top: 30px;
+  }
 }
